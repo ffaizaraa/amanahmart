@@ -31,19 +31,13 @@
 							<span class="micon dw dw-delivery-truck"></span><span class="mtext">Supplier</span>
 						</a>
 					</li>
-					<li>
-						<a href="<?php echo site_url('pelanggan'); ?>" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-file-4"></span><span class="mtext">Customer</span>
-						</a>
-					</li>
-					<li>
 						<a href="<?= base_url('kasir')?>" class="dropdown-toggle no-arrow">
 							<span class="micon dw dw-shopping-cart-1"></span><span class="mtext">Sale of Goods</span>
 						</a>
 					</li>
 					<li>
 						<a href="<?= base_url('invoice') ?>" class="dropdown-toggle no-arrow">
-							<span class="micon dw dw-invoice"></span><span class="mtext">Invoice</span>
+							<span class="micon dw dw-invoice"></span><span class="mtext">Invoices</span>
 						</a>
 					</li>
 					<!-- <li>

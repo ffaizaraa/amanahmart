@@ -1,5 +1,5 @@
 <div class="footer-wrap pd-20 mb-20 card-box">
-			Easy Shopping only at <a href="#" target="_blank">Amanah Mart</a>
+			Easy Shopping only at <a href="<?php echo site_url('home'); ?>" target="_blank">Amanah Mart</a>
 			</div>
 		</div>
 	</div>

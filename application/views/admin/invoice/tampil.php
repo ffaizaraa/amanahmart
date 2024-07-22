@@ -20,16 +20,16 @@
 				<!-- Simple Datatable start -->
 				<div class="card-box mb-30">
 					<div class="pd-20">
-						<div class="d-flex justify-content-between">
+						<div class="mb-3">
 							<h4 class="text-blue h4">List of Invoice</h4>
-						<div>
-							<label>Filter By Date</label>
-							<input type="date" class="form-control" id="filterDate">
 						</div>
+						<div class="d-flex align-items-center">
+							<label class="mr-2">Filter By Date</label>
+							<input type="date" class="form-control" id="filterDate" style="max-width: 150px;">
 						</div>
 					</div>
 					<div class="pb-20">
-						<table class="data-table table stripe hover nowrap" id="invoiceTable">
+						<table class="data-table-export table multiple-select-row hover nowrap" id="invoiceTable">
 							<thead>
 								<tr>
 									<tr>
@@ -53,7 +53,7 @@
 										<td><?= $items->kodeBarang?>
 										<small>(<?= $items->namaBarang?>)</small>
 										</td>
-										<td>Rp.<?= number_format($items->harga,2)?></td>
+										<td>Rp <?= number_format($items->harga,2)?></td>
 										<td><?= $items->qty?></td>
 										<td><?= $items->harga * $items->qty ?></td>
 									</tr>
@@ -72,7 +72,7 @@
             if (selectedDate) {
                 $('#invoiceTable tbody tr').each(function() {
                     var row = $(this);
-                    var rowDate = row.find('td:eq(1)').text().split(' ')[0]; // Get the date part if the date and time are combined
+                    var rowDate = row.find('td:eq(1)').text().split(' ')[0]; 
                     if (rowDate === selectedDate) {
                         row.show();
                     } else {
@@ -80,7 +80,7 @@
                     }
                 });
             } else {
-                $('#invoiceTable tbody tr').show(); // Show all rows if no date is selected
+                $('#invoiceTable tbody tr').show(); 
             }
         });
     });

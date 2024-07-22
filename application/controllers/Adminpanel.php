@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Adminpanel extends CI_Controller {
 
+	public function __construct() {
+        parent::__construct();
+        $this->load->model('Madmin'); // Memuat model Madmin
+    }
+
 	public function index(){
 		$this->load->view('admin/login');
 	}
@@ -29,9 +34,10 @@ class Adminpanel extends CI_Controller {
 	}  
 
 	public function dashboard(){
+		$data['barang']=$this->Madmin->get_all_data_with_join()->result();
         $this->load->view('admin/layout/header');
 		$this->load->view('admin/layout/sidebar');
-		$this->load->view('admin/dashboard');
+		$this->load->view('admin/dashboard', $data);
 		$this->load->view('admin/layout/footer');
 	}
 

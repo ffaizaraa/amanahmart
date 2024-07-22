@@ -43,7 +43,7 @@
 											</a>
 											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 												<a class="dropdown-item" href="<?php echo site_url('kategori/get_by_id/'.$val->idKategori);?>"><i class="dw dw-edit2"></i> Edit</a>
-												<a class="dropdown-item" href="<?php echo site_url('kategori/delete/'.$val->idKategori);?>"><i class="dw dw-delete-3"></i> Delete</a>
+												<a class="dropdown-item" href="<?php echo site_url('kategori/delete/'.$val->idKategori);?>" onclick="return confirm('Are you sure you want to delete this data?')"><i class="dw dw-delete-3"></i> Delete</a>
 											</div>
 										</div>
 									</td>

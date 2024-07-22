@@ -20,8 +20,8 @@
 								<?php $k = rand() ?>
 							</div>
 							<div>
-								Total Pembayaran 
-								<h1 id="totalPayment">Rp.0</h1>
+								Total Payment 
+								<h1 id="totalPayment">Rp 0</h1>
 							</div>
 						</div>
 						</div>
@@ -93,8 +93,6 @@
 					</div>
 				</div>
 
-
-
 				<script>
 					 $(document).ready(function() {
             $('#kodeBarangSelect').change(function() {
@@ -141,7 +139,7 @@
                     // Calculate and update total payment
                     var currentTotal = parseInt($('#totalPayment').text().replace(/[^0-9]/g, '')) || 0;
                     var newTotal = currentTotal + (harga * qty);
-                    $('#totalPayment').text('Rp. ' + newTotal.toLocaleString());
+                    $('#totalPayment').text('Rp ' + newTotal.toLocaleString());
 
                     // Clear input fields
                     $('#kodeBarangSelect').val('');
@@ -160,12 +158,10 @@
                 var qty = parseInt(row.find('td:eq(3)').text());
                 var currentTotal = parseInt($('#totalPayment').text().replace(/[^0-9]/g, '')) || 0;
                 var newTotal = currentTotal - (harga * qty);
-                $('#totalPayment').text('Rp. ' + newTotal.toLocaleString());
+                $('#totalPayment').text('Rp ' + newTotal.toLocaleString());
 
                 row.remove();
             });
-
-           
 
 			$('#payButton').click(function () {
                         var transactionDetails = [];
@@ -200,7 +196,7 @@
                                     alert('Transaction saved successfully');
                                     // Clear the table and total payment
                                     $('#productTable tbody').empty();
-                                    $('#totalPayment').text('Rp. 0');
+                                    $('#totalPayment').text('Rp 0');
 									
                                 },
                                 error: function (error) {

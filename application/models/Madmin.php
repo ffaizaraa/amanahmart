@@ -19,10 +19,6 @@ class Madmin extends CI_Model{
 		$q = $this->db->get_where('tbl_supplier', ['namaSupplier'=>$p]);
 		return $q;
 	}
-	public function cek_pelanggan($p){
-		$q = $this->db->get_where('tbl_pelanggan', ['namaPelanggan'=>$p]);
-		return $q;
-	}
 	public function cek_barang($p){
 		$q = $this->db->get_where('tbl_barang', ['namaBarang'=>$p]);
 		return $q;
